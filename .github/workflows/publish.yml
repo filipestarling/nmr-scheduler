@@ -18,6 +18,22 @@ jobs:
         with:
           node-version: '22'
 
+      - name: Verificar secrets
+        env:
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
+          CLOUDINARY_CLOUD_NAME: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
+          CLOUDINARY_API_KEY: ${{ secrets.CLOUDINARY_API_KEY }}
+          CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
+        run: |
+          node -e "
+          const vars = ['INSTAGRAM_ACCESS_TOKEN','INSTAGRAM_USER_ID','CLOUDINARY_CLOUD_NAME','CLOUDINARY_API_KEY','CLOUDINARY_API_SECRET'];
+          for (const v of vars) {
+            const val = process.env[v];
+            console.log(v + ': ' + (val ? 'OK (len=' + val.length + ')' : 'VAZIO ou não encontrado'));
+          }
+          "
+
       - name: Publicar posts agendados
         env:
           INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
