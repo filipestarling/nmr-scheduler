@@ -5,7 +5,9 @@
       "scheduledAt": "2026-04-26T20:49:45-03:00",
       "slidesDir": "slides/ciume-nao-te-faz-imaturo",
       "caption": "💜 Sentir ciúme não te faz imaturo — te faz humano.\n\nEle é uma emoção relacional primária. Surge quando o vínculo parece ameaçado, quando uma necessidade afetiva não está sendo atendida.\n\nO problema nunca foi sentir. É o que a gente faz com o que sente.\n\n👉 Você ainda julga quem sente ciúme?\n\n.\n.\n.\n#poliamor #naomonogamia #naomonogamiaresponsavel #psicologia #ciume #relacoesabertas #inteligenciaemocional",
-      "status": "pending"
+      "status": "failed",
+      "error": "❌ INSTAGRAM_ACCESS_TOKEN is not set in environment",
+      "failedAt": "2026-04-26T23:53:45.631Z"
     },
     {
       "id": "desafios-ep1-ciume",
