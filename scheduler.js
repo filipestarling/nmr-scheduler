@@ -54,8 +54,7 @@ function main() {
       const result = spawnSync(
         'node',
         [PUBLISH_SCRIPT, '--images', slides.join(','), '--caption', post.caption],
-        { encoding: 'utf8', cwd: BASE_DIR, timeout: 300_000,
-          env: { ...process.env } }
+        { encoding: 'utf8', cwd: BASE_DIR, timeout: 300_000 }
       );
 
       if (result.status !== 0) {
