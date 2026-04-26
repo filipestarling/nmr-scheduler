@@ -1,0 +1,36 @@
+name: Instagram Publisher
+
+on:
+  schedule:
+    - cron: '0 16 * * *'  # 13:00 BRT (UTC-3, sem horário de verão)
+  workflow_dispatch:       # permite rodar manualmente para testes
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write      # necessário para commitar schedule.json de volta
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Publicar posts agendados
+        env:
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
+          CLOUDINARY_CLOUD_NAME: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
+          CLOUDINARY_API_KEY: ${{ secrets.CLOUDINARY_API_KEY }}
+          CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
+        run: node scheduler.js
+
+      - name: Salvar status no repositório
+        run: |
+          git config user.name "NMR Scheduler"
+          git config user.email "noreply@naomonogamiaresponsavel.com"
+          git add schedule.json
+          git diff --staged --quiet || git commit -m "scheduler: atualiza status dos posts [skip ci]"
+          git push
