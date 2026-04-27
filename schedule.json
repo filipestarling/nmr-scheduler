@@ -5,7 +5,9 @@
       "scheduledAt": "2026-04-26T21:00:43-03:00",
       "slidesDir": "slides/ciume-nao-te-faz-imaturo",
       "caption": "💜 Sentir ciúme não te faz imaturo — te faz humano.\n\nEle é uma emoção relacional primária. Surge quando o vínculo parece ameaçado, quando uma necessidade afetiva não está sendo atendida.\n\nO problema nunca foi sentir. É o que a gente faz com o que sente.\n\n👉 Você ainda julga quem sente ciúme?\n\n.\n.\n.\n#poliamor #naomonogamia #naomonogamiaresponsavel #psicologia #ciume #relacoesabertas #inteligenciaemocional",
-      "status": "pending"
+      "status": "failed",
+      "error": "❌ createChildContainer failed [400]: {\"error\":{\"message\":\"Error validating access token: Session has expired on Sunday, 26-Apr-26 17:00:00 PDT. The current time is Sunday, 26-Apr-26 17:03:26 PDT.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":463,\"fbtrace_id\":\"AJtR_qLIfcQ8Ma122g5S0ws\"}}",
+      "failedAt": "2026-04-27T00:03:12.941Z"
     },
     {
       "id": "desafios-ep1-ciume",
