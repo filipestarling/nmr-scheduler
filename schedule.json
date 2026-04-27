@@ -15,9 +15,7 @@
       "scheduledAt": "2026-04-27T13:00:00-03:00",
       "slidesDir": "slides/desafios-ep1-ciume",
       "caption": "💜 O ciúme não é inimigo — é um alarme. Na não monogamia, aprender a escutá-lo (em vez de suprimi-lo) faz toda a diferença.\n👉 O que ele está tentando proteger em você?\n\n.\n.\n.\n#poliamor #naomonogamia #naomonogamiaresponsavel #psicologia #ciume #relacoesabertas #desafiosnaomonogamia",
-      "status": "failed",
-      "error": "❌ createChildContainer failed [400]: {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"Aro7VJFLbjMGnSkNL42O2KM\"}}",
-      "failedAt": "2026-04-27T17:27:28.618Z"
+      "status": "pending"
     },
     {
       "id": "desafios-ep2-exaustao",
