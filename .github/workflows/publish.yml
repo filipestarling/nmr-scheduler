@@ -1,9 +1,7 @@
 name: Instagram Publisher
 
 on:
-  schedule:
-    - cron: '0 16 * * *'  # 13:00 BRT (UTC-3, sem horário de verão)
-  workflow_dispatch:       # permite rodar manualmente para testes
+  workflow_dispatch:       # disparado pelo cron-job.org às 13h BRT
 
 jobs:
   publish:
