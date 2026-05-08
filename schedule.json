@@ -113,7 +113,9 @@
       "scheduledAt": "2026-05-08T13:00:00-03:00",
       "slidesDir": "slides/liberdade-relacional",
       "caption": "💜 O discurso é de liberdade. A experiência do outro é instabilidade.\n\nÉ comum encontrar pessoas que reivindicam autonomia enquanto evitam se implicar emocionalmente. Disponibilidade intermitente, promessas vagas, silêncios não elaborados.\n\nResponsabilidade emocional não é controle. É reconhecer que vínculos ativam sistemas de apego e geram necessidades legítimas de cuidado — independente do formato da relação.\n\nLiberdade relacional, quando ética, amplia possibilidades sem precarizar vínculos.\n\nLiberdade que não considera o impacto deixa de ser valor e vira defesa.\n\n👉 Você já viveu essa contradição? Comenta aqui 💜\n\n.\n.\n.\n#poliamor #naomonogamia #naomonogamiaresponsavel #responsabilidadeafetiva #liberdaderelacional #eticarelacional #psicologia #relacoesabertas #vinculos",
-      "status": "pending"
+      "status": "failed",
+      "error": "❌ fetch failed",
+      "failedAt": "2026-05-08T16:00:27.933Z"
     },
     {
       "id": "nm-nao-salva-relacionamento",
