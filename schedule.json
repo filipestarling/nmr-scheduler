@@ -132,7 +132,9 @@
       "scheduledAt": "2026-05-10T13:00:00-03:00",
       "slidesDir": "slides/comunicacao-nao-resolve-tudo",
       "caption": "💜 Comunicação não resolve tudo. E isso é um problema que merece ser dito.\n\nA comunicação é necessária — mas não suficiente. Quando ela é usada como único recurso de regulação emocional, pode virar pressão, desgaste ou controle velado.\n\nComunicar não é garantia de resolução. É ponto de partida para o trabalho emocional real.\n\n👉 Você já viveu isso? Comenta aqui 💜\n\n.\n.\n.\n#poliamor #naomonogamia #naomonogamiaresponsavel #comunicacao #psicologia #relacoesabertas #responsabilidadeafetiva",
-      "status": "pending"
+      "status": "failed",
+      "error": "ENOENT: no such file or directory, scandir '/home/runner/work/nmr-scheduler/nmr-scheduler/slides/comunicacao-nao-resolve-tudo'",
+      "failedAt": "2026-05-10T16:00:18.723Z"
     },
     {
       "id": "amor-livre-nao-e-amor-sem-limites",
