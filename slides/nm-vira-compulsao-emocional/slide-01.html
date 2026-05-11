@@ -3,21 +3,21 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap');
 *{margin:0;padding:0;box-sizing:border-box}
-body{width:1080px;height:1440px;overflow:hidden;background:#1C0D33;font-family:'Inter','Segoe UI',Arial,sans-serif;display:flex;flex-direction:column;justify-content:center;align-items:center;position:relative}
-body::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 900px 700px at 50% 30%,#2D1555 0%,transparent 65%),radial-gradient(ellipse 500px 500px at 80% 85%,#0E0620 0%,transparent 60%);pointer-events:none}
-.capa-inner{display:flex;flex-direction:column;align-items:center;gap:48px;position:relative;z-index:2;padding:80px;text-align:center}
-.capa-tag{font-family:'Inter',sans-serif;font-size:28px;font-weight:600;color:#7C3AED;letter-spacing:0.12em;text-transform:uppercase}
-.capa-title{font-family:'Lora',Georgia,serif;font-size:88px;font-weight:600;line-height:1.15;color:#FFFFFF}
-.accent-coral{color:#F87171;font-style:italic}
-.accent{color:#C4B5FD;font-style:italic}
-.capa-divider{width:96px;height:3px;background:linear-gradient(90deg,#7C3AED,#C4B5FD);border-radius:2px}
-.capa-sub{font-family:'Lora',Georgia,serif;font-size:52px;font-weight:400;font-style:italic;color:#C4B5FD;line-height:1.3}
+body{width:1080px;height:1440px;overflow:hidden;background:#1C0D33;font-family:'Inter','Segoe UI',Arial,sans-serif;display:flex;flex-direction:column;position:relative}
+body::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 800px 600px at 50% 0%,#2D1555 0%,transparent 70%),radial-gradient(ellipse 600px 500px at 100% 100%,#0E0620 0%,transparent 60%);pointer-events:none}
+.content{flex:1;display:flex;flex-direction:column;justify-content:center;padding:100px 80px;position:relative;z-index:2;gap:48px}
+.cover-hero{font-family:'Lora',Georgia,serif;font-size:96px;font-weight:600;line-height:1.15;color:#FFFFFF;letter-spacing:-0.01em}
+.cover-hero .accent-coral{color:#F87171;font-style:italic}
+.cover-hero .accent{color:#C4B5FD;font-style:italic}
+.divider{width:88px;height:4px;background:linear-gradient(90deg,#7C3AED,#C4B5FD);border-radius:2px}
+.swipe-footer{padding:40px 80px 56px;position:relative;z-index:2;display:flex;justify-content:flex-end}
+.swipe-hint{font-size:32px;color:#C4B5FD;font-weight:600;letter-spacing:0.02em}
 </style></head>
 <body>
-<div class="capa-inner">
-  <span class="capa-tag">não monogamia</span>
-  <h1 class="capa-title">Quando a NM vira <span class="accent-coral">compulsão</span>.</h1>
-  <div class="capa-divider"></div>
-  <p class="capa-sub">Mais conexões — mais <span class="accent">fuga</span>?</p>
+<div class="content">
+  <h1 class="cover-hero">Quando a NM vira <span class="accent-coral">compulsão</span>.</h1>
+  <div class="divider"></div>
+  <h1 class="cover-hero">Mais conexões — mais <span class="accent">fuga</span>?</h1>
 </div>
+<div class="swipe-footer"><span class="swipe-hint">arraste →</span></div>
 </body></html>
