@@ -9,7 +9,7 @@ const { spawnSync } = require('child_process');
 const BASE_DIR      = __dirname;
 const SCHEDULE_FILE = join(BASE_DIR, 'schedule.json');
 const PUBLISH_SCRIPT = join(BASE_DIR, 'skills/instagram-publisher/scripts/publish.js');
-const MAX_LATE_HOURS = 2;
+const MAX_LATE_HOURS = 4;
 
 function collectSlides(slidesDir) {
   const dir = resolve(BASE_DIR, slidesDir);
