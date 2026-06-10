@@ -442,7 +442,9 @@
       "scheduledAt": "2026-06-10T13:00:00-03:00",
       "slidesDir": "slides/2026-06-10_quem-sou-sem-exclusividade",
       "caption": "💜 não monogamia Quem sou eu sem a exclusividade.\n\n👉 Sua identidade já foi abalada pela falta de exclusividade? Comenta aqui 💜\n\n.\n.\n.\n#poliamor #naomonogamia #naomonogamiaresponsavel #psicologia #relacoesabertas #responsabilidadeafetiva #relacionamentos #autoconhecimento #inteligenciaemocional",
-      "status": "pending"
+      "status": "failed",
+      "error": "❌ createChildContainer failed [400]: {\"error\":{\"message\":\"Timeout\",\"type\":\"OAuthException\",\"code\":-2,\"error_subcode\":2207003,\"is_transient\":false,\"error_user_title\":\"Tempo limite atingido\",\"error_user_msg\":\"O download da m\\u00eddia demora muito.\",\"fbtrace_id\":\"As7c9lR9Cngxl9HfR_zHRtC\"}}",
+      "failedAt": "2026-06-10T16:00:26.502Z"
     },
     {
       "id": "reconhecer-limites-saude-mental",
