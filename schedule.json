@@ -461,7 +461,9 @@
       "scheduledAt": "2026-06-12T13:00:00-03:00",
       "slidesDir": "slides/2026-06-12_relacoes-seguras-sistema-nervoso",
       "caption": "💜 não monogamia Relações seguras regulam o sistema nervoso.\n\n👉 Você sente segurança nos seus vínculos? Comenta aqui 💜\n\n.\n.\n.\n#poliamor #naomonogamia #naomonogamiaresponsavel #psicologia #relacoesabertas #responsabilidadeafetiva #relacionamentos #autoconhecimento #inteligenciaemocional",
-      "status": "pending"
+      "status": "failed",
+      "error": "❌ createChildContainer failed [500]: {\"error\":{\"message\":\"An unexpected error has occurred. Please retry your request later.\",\"type\":\"OAuthException\",\"is_transient\":true,\"code\":2,\"fbtrace_id\":\"AfH9gzvDEiXrEnsgdWNlCoM\"}}",
+      "failedAt": "2026-06-12T16:00:27.541Z"
     },
     {
       "id": "seguranca-emocional-na-nm",
