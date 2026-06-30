@@ -2,6 +2,8 @@ name: Instagram Publisher
 
 on:
   workflow_dispatch:       # disparado pelo cron-job.org às 13h BRT
+  schedule:
+    - cron: '0 21 * * *'   # 18h BRT — post OWC (TEMPORARIO: remover apos 30/06/2026)
 
 jobs:
   publish:
