@@ -1,0 +1,23 @@
+name: Aldeia Daily Promo
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 22 * * *'   # 22:00 UTC = 19h BRT (divulgacao diaria da Aldeia, 11-14/07)
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Publicar post da Aldeia do dia
+        env:
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
+          CLOUDINARY_CLOUD_NAME: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
+          CLOUDINARY_API_KEY: ${{ secrets.CLOUDINARY_API_KEY }}
+          CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
+        run: node aldeia-daily/publish-aldeia-daily.mjs
