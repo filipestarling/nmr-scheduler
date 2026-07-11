@@ -2,8 +2,6 @@
 
 on:
   workflow_dispatch:       # disparado pelo cron-job.org Ã s 13h BRT
-  schedule:
-    - cron: '0 21 * * *'   # 21:00 UTC = 18h BRT (posts na-midia agendados)
 
 jobs:
   publish:
