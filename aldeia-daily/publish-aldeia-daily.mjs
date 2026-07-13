@@ -46,7 +46,7 @@ Tudo o que a comunidade não mono precisa, num só lugar — a Aldeia Não Mono.
 const MAP = {
   '2026-07-11': { file: 'post-02.jpg', caption: CAP.p02 },
   '2026-07-12': { file: 'post-04.png', caption: CAP.p04 },
-  '2026-07-13': { file: 'post-05.png', caption: CAP.p05 },
+  // 2026-07-13 (post-05) publicado manualmente com collabs -> https://www.instagram.com/p/Dav3aWOFArS/
   '2026-07-14': { file: 'post-12.png', caption: CAP.p12 },
 };
 
