@@ -53,15 +53,56 @@ export async function uploadToCloudinary(imagePath, { cloudName, apiKey, apiSecr
 
 const IG_BASE = 'https://graph.facebook.com/v21.0';
 
+// Erros transitórios da Graph API que valem nova tentativa:
+//   2207052 → IG não conseguiu baixar a mídia do Cloudinary (CDN ainda frio)
+//   2207027 → "Media ID is not available" (container ainda não liberado pro publish)
+//   2207001/2207003 → falhas temporárias de download
+//   1 / 2      → erros genéricos temporários da plataforma
+const TRANSIENT_SUBCODES = new Set([2207052, 2207027, 2207001, 2207003]);
+const TRANSIENT_CODES = new Set([1, 2]);
+
+function isTransient(body) {
+  const e = body && body.error;
+  if (!e) return false;
+  if (e.is_transient) return true;
+  if (TRANSIENT_SUBCODES.has(e.error_subcode)) return true;
+  if (TRANSIENT_CODES.has(e.code)) return true;
+  return false;
+}
+
+/**
+ * Executa `fn` (que deve retornar {res, body}) com novas tentativas em falhas
+ * transitórias. Espera crescente: 6s, 12s, 18s, ...
+ */
+async function withRetry(label, fn, { attempts = 5, baseDelayMs = 6000 } = {}) {
+  let last;
+  for (let i = 1; i <= attempts; i++) {
+    const { res, body } = await fn();
+    if (res.ok && body && !body.error) return body;
+    last = body;
+    const transient = isTransient(body);
+    const msg = (body && body.error && body.error.message) || `HTTP ${res.status}`;
+    if (!transient || i === attempts) {
+      throw new Error(`${label} failed [${res.status}] after ${i} attempt(s): ${JSON.stringify(body)}`);
+    }
+    const wait = baseDelayMs * i;
+    console.log(`   ⚠  ${label}: ${msg} — tentativa ${i}/${attempts}, aguardando ${wait / 1000}s...`);
+    await new Promise(r => setTimeout(r, wait));
+  }
+  throw new Error(`${label} failed: ${JSON.stringify(last)}`);
+}
+
 export async function createChildContainer(userId, imageUrl, accessToken) {
   const params = new URLSearchParams({
     image_url: imageUrl,
     is_carousel_item: 'true',
     access_token: accessToken,
   });
-  const res = await fetch(`${IG_BASE}/${userId}/media?${params}`, { method: 'POST' });
-  if (!res.ok) throw new Error(`createChildContainer failed [${res.status}]: ${await res.text()}`);
-  return (await res.json()).id;
+  const body = await withRetry('createChildContainer', async () => {
+    const res = await fetch(`${IG_BASE}/${userId}/media?${params}`, { method: 'POST' });
+    return { res, body: await res.json().catch(() => null) };
+  });
+  return body.id;
 }
 
 export async function getContainerStatus(containerId, accessToken) {
@@ -71,7 +112,7 @@ export async function getContainerStatus(containerId, accessToken) {
   return (await res.json()).status_code;
 }
 
-export async function pollUntilFinished(containerId, accessToken, timeoutMs = 60_000, intervalMs = 3_000) {
+export async function pollUntilFinished(containerId, accessToken, timeoutMs = 150_000, intervalMs = 3_000) {
   const deadline = Date.now() + timeoutMs;
   while (Date.now() < deadline) {
     const status = await getContainerStatus(containerId, accessToken);
@@ -96,9 +137,13 @@ export async function createCarouselContainer(userId, childIds, caption, accessT
 
 export async function publishMedia(userId, containerId, accessToken) {
   const params = new URLSearchParams({ creation_id: containerId, access_token: accessToken });
-  const res = await fetch(`${IG_BASE}/${userId}/media_publish?${params}`, { method: 'POST' });
-  if (!res.ok) throw new Error(`publishMedia failed [${res.status}]: ${await res.text()}`);
-  return (await res.json()).id;
+  // Mais tentativas e espera maior: o erro 2207027 ("Media ID is not available")
+  // costuma resolver sozinho em alguns segundos.
+  const body = await withRetry('publishMedia', async () => {
+    const res = await fetch(`${IG_BASE}/${userId}/media_publish?${params}`, { method: 'POST' });
+    return { res, body: await res.json().catch(() => null) };
+  }, { attempts: 6, baseDelayMs: 8000 });
+  return body.id;
 }
 
 export async function getPermalink(mediaId, accessToken) {
@@ -144,7 +189,7 @@ async function main() {
   // Wait for Cloudinary CDN edge to propagate before asking IG to fetch.
   // Without this, IG sometimes hits an edge node before the image is cached
   // and fails with "Não foi possível obter a mídia deste URI" (error 2207052).
-  const CDN_WARMUP_MS = 8000;
+  const CDN_WARMUP_MS = 15000;
   console.log(`\n⏲  Aguardando ${CDN_WARMUP_MS / 1000}s pra Cloudinary CDN propagar...`);
   await new Promise(r => setTimeout(r, CDN_WARMUP_MS));
 
@@ -166,6 +211,12 @@ async function main() {
   );
   await pollUntilFinished(carouselId, INSTAGRAM_ACCESS_TOKEN);
   console.log(`   Carousel container ID: ${carouselId}`);
+
+  // FINISHED nem sempre significa publicável na mesma hora: o publish pode
+  // responder 2207027 ("Media ID is not available") por alguns segundos.
+  const SETTLE_MS = 6000;
+  console.log(`   ⏲  Aguardando ${SETTLE_MS / 1000}s antes de publicar...`);
+  await new Promise(r => setTimeout(r, SETTLE_MS));
 
   if (dryRun) {
     console.log('\n✅ DRY RUN complete — skipping final publish call.');
