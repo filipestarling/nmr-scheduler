@@ -787,11 +787,10 @@
     },
     {
       "id": "errei-virei-vilao",
-      "scheduledAt": "2026-07-15T13:00:00-03:00",
+      "scheduledAt": "2026-07-29T13:00:00-03:00",
       "slidesDir": "slides/2026-07-15_errei-virei-vilao",
       "caption": "💜 Errei tentando. Virei o vilão?\n\nNinguém entra na não monogamia pronto, e no caminho a gente quase sempre machuca tentando acertar. Mas existe uma linha: uma coisa é errar buscando construir, outra é ferir conscientemente e não se responsabilizar. Nem toda falha é abuso, e nem todo abuso vira só \"processo\". O que diferencia é reparar: reconhecer o dano, escutar e mudar a conduta.\n\n👉 Você já precisou reparar um dano que causou tentando acertar? Comenta aqui 💜\n\n.\n.\n.\n#poliamor #naomonogamia #naomonogamiaresponsavel #responsabilidadeafetiva #psicologia #relacionamentos #autoconhecimento",
-      "status": "failed",
-      "error": "❌ createChildContainer failed [400]: {\"error\":{\"message\":\"Only photo or video can be accepted as media type.\",\"type\":\"OAuthException\",\"code\":9004,\"error_subcode\":2207052,\"is_transient\":false,\"error_user_title\":\"Falha ao baixar m\\u00eddia. O URI da m\\u00eddia n\\u00e3o atende aos nossos requisitos.\",\"error_user_msg\":\"N\\u00e3o foi poss\\u00edvel obter a m\\u00eddia deste URI: https:\\/\\/res.cloudinary.com\\/dgdlno4hx\\/image\\/upload\\/v1784131252\\/sqr16y2v66tktep2evfv.jpg.Verifique a se\\u00e7\\u00e3o de limita\\u00e7\\u00f5es no nosso documento de desenvolvimento para mais informa\\u00e7\\u00f5es: https:\\/\\/developers.facebook.com\\/docs\\/instagram-platform\\/instagram-graph-api\\/reference\\/ig-user\\/media#creating\",\"fbtrace_id\":\"AIS11fKHXsiJK_DXPqsPKlc\"}}",
+      "status": "pending",
       "failedAt": "2026-07-15T16:00:46.743Z"
     },
     {
@@ -869,9 +868,11 @@
       "scheduledAt": "2026-07-23T13:00:00-03:00",
       "slidesDir": "slides/2026-07-23_conto-do-unicornio",
       "caption": "💜 Cuidado com os caçadores de unicórnio\n\nÉ a pessoa procurada pra \"completar\" o casal — desejada enquanto serve à fantasia e descartada quando surge a primeira insegurança. Relação principal não é escudo: hierarquia não é licença pra crueldade.\n\n👉 Você já viu (ou viveu) o conto do unicórnio? Comenta aqui 💜\n\n. . . #poliamor #naomonogamia #naomonogamiaresponsavel #unicornio #responsabilidadeafetiva #psicologia #relacionamentos",
-      "status": "failed",
-      "error": "❌ publishMedia failed [400]: {\"error\":{\"message\":\"Media ID is not available\",\"type\":\"OAuthException\",\"code\":9007,\"error_subcode\":2207027,\"is_transient\":false,\"error_user_title\":\"N\\u00e3o \\u00e9 poss\\u00edvel publicar\",\"error_user_msg\":\"A m\\u00eddia n\\u00e3o est\\u00e1 pronta para ser publicada. Aguarde um momento.\",\"fbtrace_id\":\"ASC-arO264K-5O0FuzfarDl\"}}",
-      "failedAt": "2026-07-23T16:00:36.954Z"
+      "status": "published",
+      "failedAt": "2026-07-23T16:00:36.954Z",
+      "publishedAt": "2026-07-24T00:04:53.323Z",
+      "postId": "18130951417622613",
+      "permalink": "https://www.instagram.com/p/DbJ6RLgmnDm/"
     },
     {
       "id": "owc-casais-fim-de-semana",
