@@ -1152,7 +1152,9 @@
       "scheduledAt": "2026-08-13T13:00:00-03:00",
       "slidesDir": "slides/2026-08-13_rp2-fadiga-drs",
       "caption": "💜 [Desafios Não Mono · Ep. 5 de 7] Socorro, não aguento mais conversar! A fadiga das DRs.\n\nTodo manual diz que comunicação é a chave. Só que processar cada sentimento, validar cada acordo e discutir cada detalhe gera uma fadiga de DR bem real.\n\nComo terapeuta de casais, aponto duas armadilhas. A primeira: existe uma linha fina entre combinar limites e microgerenciar a vida do outro. Exigir saber de cada mensagem e cada passo costuma ser ansiedade querendo controlar, não cuidado. A segunda: acordo demais também sufoca. Quando os combinados viram uma prisão de regras burocráticas, matam a espontaneidade e esgotam todo mundo.\n\nComunicação boa não é discutir tudo o tempo todo. É tratar o que pesa de um jeito que aproxime, em vez de esgotar os dois.\n\n👉 Qual parte das DRs mais cansa você? Comenta aqui.\n\n.\n.\n.\n#comunicacao #naomonogamia #poliamor #relacaoaberta #dr #psicologiaclinica #naomonogamiaresponsavel",
-      "status": "pending"
+      "status": "failed",
+      "error": "❌ createChildContainer failed [400] after 1 attempt(s): {\"error\":{\"message\":\"Error validating access token: Session has expired on Wednesday, 12-Aug-26 13:14:21 PDT. The current time is Thursday, 13-Aug-26 09:00:46 PDT.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":463,\"fbtrace_id\":\"AVMLliZXc5xprkVz7FF8Q6V\"}}",
+      "failedAt": "2026-08-13T16:00:25.844Z"
     },
     {
       "id": "rp2-custo-julgamento",
