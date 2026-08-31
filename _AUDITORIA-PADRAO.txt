@@ -1,0 +1,190 @@
+AUDITORIA DE PADRAO - 131 carrosseis
+==============================================================================
+CTA   = slide 09: accent unico deve ser CORAL, botao sem emoji
+FINAL = slide 10: conteudo fixo, comparado com a referencia atual
+==============================================================================
+
+POST                                                   N  CTA                          FINAL
+------------------------------------------------------------------------------
+2026-05-12_varios-vinculos-nao-te-torna-disponivel    10  ok                           DIFERE da referencia (12)
+2026-05-13_cuidado-relacional-e-marcador-etico        10  ok                           DIFERE da referencia (12)
+2026-05-14_nm-ativa-traumas                           10  ok                           DIFERE da referencia (12)
+2026-05-15_apego-evitativo-idealizacao-liberdade      10  ok                           DIFERE da referencia (12)
+2026-05-16_ciume-e-medo-ou-necessidade                10  ok                           DIFERE da referencia (12)
+2026-05-17_o-ciume-pode-ser-professor                 10  ok                           DIFERE da referencia (12)
+2026-05-18_comparacao-veneno-invisivel                10  ok                           ok
+2026-05-19_nm-vira-compulsao-emocional                10  ok                           ok
+2026-05-20_aceitei-por-medo                           10  ok                           ok
+2026-05-21_acordos-estruturam-liberdade               10  ok                           ok
+2026-05-22_acordos-nao-substituem-cuidado             10  accent LILAS                 ok
+2026-05-23_amor-ou-obediencia                         10  ok                           ok
+2026-05-24_ausencia-de-regras-presenca                10  ok                           ok
+2026-05-25_cabeca-aceita-corpo-reage                  10  ok                           ok
+2026-05-26_ciume-nao-e-prova-de-amor                  10  ok                           ok
+2026-05-27_conforto-e-cerceamento                     10  accent LILAS                 ok
+2026-05-28_desconforto-nao-e-sofrimento               10  ok                           ok
+2026-05-29_escolha-o-seu-dificil                      10  ok                           ok
+2026-05-30_escolha-ou-medo                            10  ok                           ok
+2026-05-31_escolhendo-ou-adaptando                    10  ok                           ok
+2026-06-01_shakira-monogamia                          10  ok                           ok
+2026-06-02_liberdade-ou-fuga                          10  ok                           ok
+2026-06-03_liberdade-te-assusta                       10  ok                           ok
+2026-06-04_liberdade-vira-sobrecarga                  10  ok                           ok
+2026-06-05_limites-nao-sao-controle                   10  ok                           ok
+2026-06-06_machismo-na-nm                             10  accent LILAS                 ok
+2026-06-07_nada-garante-que-outro-fique               10  ok                           ok
+2026-06-08_novos-discursos-velhas-praticas            10  ok                           ok
+2026-06-09_pluralidade-nao-elimina-solidao            10  ok                           ok
+2026-06-10_quem-sou-sem-exclusividade                 10  ok                           ok
+2026-06-11_reconhecer-limites-saude-mental            10  ok                           ok
+2026-06-12_relacoes-seguras-sistema-nervoso           10  ok                           ok
+2026-06-13_seguranca-emocional-na-nm                  10  ok                           ok
+2026-06-14_silencio-e-controle                        10  ok                           ok
+2026-06-15_traicao-na-nm                              10  ok                           ok
+2026-06-16_transparencia-sem-despejo                  10  ok                           ok
+2026-06-17_dados-2-milhoes                            10  ok                           ok
+2026-06-18_monogamia-posse                            10  ok                           ok
+2026-06-19_mitos-nm                                   10  ok                           ok
+2026-06-20_sociedade-ja-nao-mono                      10  ok                           ok
+2026-06-21_compersao                                  10  ok                           ok
+2026-06-22_fechar-a-relacao                           10  ok                           ok
+2026-06-23_teoria-x-pratica                           10  ok                           ok
+2026-06-24_ninguem-100-nao-mono                       10  ok                           ok
+2026-06-25_controle-disfarcado                         9  ok                           so 9 slides (sem final fixo?)
+2026-06-26_glossario-termos                           10  ok                           ok
+2026-06-27_autonomia-maturidade-fuga                  10  ok                           ok
+2026-06-28_nm-machista                                10  ok                           ok
+2026-06-29_primeiros-passos-nm                        10  ok                           ok
+2026-06-30_ciume-nao-some                             10  ok                           ok
+2026-06-30_owc-casais-fim-de-semana                   10  ok                           ok
+2026-07-01_comunicacao-nm                             10  ok                           ok
+2026-07-01_poliamor-no-brasil                         10  ok                           ok
+2026-07-02_recursos-internos-nm                       10  ok                           ok
+2026-07-03_dificuldades-nm                            10  ok                           ok
+2026-07-03_vaticano-decreto                            9  ok                           so 9 slides (sem final fixo?)
+2026-07-04_organizacao-tempo-nm                       10  ok                           ok
+2026-07-05_julgamento-social-nm                       10  ok                           ok
+2026-07-06_ciume-no-corpo                             10  ok                           DIFERE da referencia (11)
+2026-07-06_polifidelidade                              9  ok                           so 9 slides (sem final fixo?)
+2026-07-07_desromantizando-inicio                     10  ok                           ok
+2026-07-07_maternidade-nao-mono                        9  ok                           so 9 slides (sem final fixo?)
+2026-07-08_animais-escala                              9  ok                           so 9 slides (sem final fixo?)
+2026-07-08_frieza-nao-e-evolucao                      10  ok                           ok
+2026-07-09_goldenberg-tesao                            9  ok                           so 9 slides (sem final fixo?)
+2026-07-09_liberdade-vira-individualismo              10  ok                           ok
+2026-07-10_monogamia-unilateral                        9  ok                           so 9 slides (sem final fixo?)
+2026-07-10_nao-mono-de-que                            10  ok                           ok
+2026-07-11_racionalizacao-defesa                      10  ok                           ok
+2026-07-12_leveza-ou-descaso                          10  ok                           ok
+2026-07-13_autonomia-ou-isolamento                    10  ok                           ok
+2026-07-14_desequilibrio-mudo                         10  ok                           ok
+2026-07-15_errei-virei-vilao                          10  ok                           ok
+2026-07-16_amar-e-logistica                           10  ok                           ok
+2026-07-17_relacao-nao-e-terapia                      10  ok                           ok
+2026-07-18_liberdade-irresponsavel                    10  ok                           DIFERE da referencia (11)
+2026-07-19_poliamor-aberta-nm                         10  ok                           ok
+2026-07-20_nm-pode-ser-sofrida                         9  ok                           so 9 slides (sem final fixo?)
+2026-07-21_monogamia-compulsoria                      10  ok                           ok
+2026-07-22_zona-cinzenta                              10  ok                           ok
+2026-07-23_conto-do-unicornio                         10  ok                           ok
+2026-07-24_geracao-z                                   9  ok                           so 9 slides (sem final fixo?)
+2026-07-25_neomonogamia                                9  ok                           so 9 slides (sem final fixo?)
+2026-07-26_nme-etica                                   9  ok                           so 9 slides (sem final fixo?)
+2026-07-27_voltar-monogamia                            9  ok                           so 9 slides (sem final fixo?)
+2026-07-28_apps-aldeia                                 9  ok                           so 9 slides (sem final fixo?)
+2026-07-30_rp-cnv-pedir-sem-conflito                  10  ok                           ok
+2026-07-31_rp-ciume-ou-inveja                         10  ok                           ok
+2026-08-01_rp-camadas-ep1                             10  ok                           ok
+2026-08-02_rp-camadas-ep2                             10  ok                           ok
+2026-08-03_rp-camadas-ep3                             10  ok                           ok
+2026-08-04_rp-camadas-ep4                             10  ok                           ok
+2026-08-05_rp-camadas-ep5                             10  ok                           ok
+2026-08-06_rp-camadas-ep6                             10  ok                           ok
+2026-08-07_rp-camadas-ep7                             10  ok                           ok
+2026-08-08_rp-ciume-nao-te-faz-imaturo                10  ok                           ok
+2026-08-09_rp2-ciume-alarme                            8  ok                           so 8 slides (sem final fixo?)
+2026-08-10_rp2-polisaturacao                           8  ok                           so 8 slides (sem final fixo?)
+2026-08-11_rp2-comparacao                              8  ok                           so 8 slides (sem final fixo?)
+2026-08-12_rp2-nre-paixao                              8  ok                           so 8 slides (sem final fixo?)
+2026-08-13_rp2-fadiga-drs                              8  ok                           so 8 slides (sem final fixo?)
+2026-08-14_rp2-custo-julgamento                        8  ok                           so 8 slides (sem final fixo?)
+2026-08-15_rp2-renegociar-acordo                       8  ok                           so 8 slides (sem final fixo?)
+2026-08-16_rp2-liberdade-sem-cuidado                  10  ok                           ok
+2026-08-17_rp2-vergonha-do-ciume                      10  ok                           ok
+2026-08-18_rp2-nao-mono-perfeito                      10  ok                           ok
+2026-08-19_rp3-nm-nao-salva                           10  ok                           ok
+2026-08-20_rp3-comunicacao-nao-resolve                10  ok                           ok
+2026-08-21_rp3-amor-livre-limites                     10  ok                           ok
+2026-08-22_rp3-vinculos-disponibilidade               10  ok                           ok
+2026-08-23_rp3-nm-ativa-traumas                       10  ok                           ok
+2026-08-24_rp3-apego-evitativo                        10  ok                           ok
+2026-08-25_rp3-nm-compulsao                           10  ok                           ok
+2026-08-26_rp3-aceitei-por-medo                       10  ok                           ok
+2026-08-27_rp3-cabeca-corpo                           10  ok                           ok
+2026-08-28_rp3-desconforto-sofrimento                 10  ok                           ok
+amor-livre-nao-e-amor-sem-limites                     10  ok                           DIFERE da referencia (12)
+ciume-nao-te-faz-imaturo                               9  ok                           so 9 slides (sem final fixo?)
+comunicacao-nao-resolve-tudo                          10  ok                           DIFERE da referencia (12)
+desafios-ep1-ciume                                     8  ok                           so 8 slides (sem final fixo?)
+desafios-ep2-exaustao                                  7  ok                           so 7 slides (sem final fixo?)
+desafios-ep3-comparacao                                7  ok                           so 7 slides (sem final fixo?)
+desafios-ep4-nre                                       7  ok                           so 7 slides (sem final fixo?)
+desafios-ep5-fadiga-drs                                7  ok                           so 7 slides (sem final fixo?)
+desafios-ep6-julgamento                                7  accent LILAS                 so 7 slides (sem final fixo?)
+desafios-ep7-acordos                                   7  ok                           so 7 slides (sem final fixo?)
+liberdade-relacional                                  10  ok                           DIFERE da referencia (12)
+liberdade-sem-cuidado                                 10  ok                           DIFERE da referencia (12)
+nao-mono-perfeito                                     10  ok                           DIFERE da referencia (12)
+nm-nao-salva-relacionamento                           10  ok                           DIFERE da referencia (12)
+vergonha-do-ciume                                     10  ok                           DIFERE da referencia (12)
+
+
+==============================================================================
+FORA DO PADRAO: 46
+==============================================================================
+2026-05-12_varios-vinculos-nao-te-torna-disponivel    CTA: ok                         FINAL: DIFERE da referencia (12)
+2026-05-13_cuidado-relacional-e-marcador-etico        CTA: ok                         FINAL: DIFERE da referencia (12)
+2026-05-14_nm-ativa-traumas                           CTA: ok                         FINAL: DIFERE da referencia (12)
+2026-05-15_apego-evitativo-idealizacao-liberdade      CTA: ok                         FINAL: DIFERE da referencia (12)
+2026-05-16_ciume-e-medo-ou-necessidade                CTA: ok                         FINAL: DIFERE da referencia (12)
+2026-05-17_o-ciume-pode-ser-professor                 CTA: ok                         FINAL: DIFERE da referencia (12)
+2026-05-22_acordos-nao-substituem-cuidado             CTA: accent LILAS               FINAL: ok
+2026-05-27_conforto-e-cerceamento                     CTA: accent LILAS               FINAL: ok
+2026-06-06_machismo-na-nm                             CTA: accent LILAS               FINAL: ok
+2026-06-25_controle-disfarcado                        CTA: ok                         FINAL: so 9 slides (sem final fixo?)
+2026-07-03_vaticano-decreto                           CTA: ok                         FINAL: so 9 slides (sem final fixo?)
+2026-07-06_ciume-no-corpo                             CTA: ok                         FINAL: DIFERE da referencia (11)
+2026-07-06_polifidelidade                             CTA: ok                         FINAL: so 9 slides (sem final fixo?)
+2026-07-07_maternidade-nao-mono                       CTA: ok                         FINAL: so 9 slides (sem final fixo?)
+2026-07-08_animais-escala                             CTA: ok                         FINAL: so 9 slides (sem final fixo?)
+2026-07-09_goldenberg-tesao                           CTA: ok                         FINAL: so 9 slides (sem final fixo?)
+2026-07-10_monogamia-unilateral                       CTA: ok                         FINAL: so 9 slides (sem final fixo?)
+2026-07-18_liberdade-irresponsavel                    CTA: ok                         FINAL: DIFERE da referencia (11)
+2026-07-20_nm-pode-ser-sofrida                        CTA: ok                         FINAL: so 9 slides (sem final fixo?)
+2026-07-24_geracao-z                                  CTA: ok                         FINAL: so 9 slides (sem final fixo?)
+2026-07-25_neomonogamia                               CTA: ok                         FINAL: so 9 slides (sem final fixo?)
+2026-07-26_nme-etica                                  CTA: ok                         FINAL: so 9 slides (sem final fixo?)
+2026-07-27_voltar-monogamia                           CTA: ok                         FINAL: so 9 slides (sem final fixo?)
+2026-07-28_apps-aldeia                                CTA: ok                         FINAL: so 9 slides (sem final fixo?)
+2026-08-09_rp2-ciume-alarme                           CTA: ok                         FINAL: so 8 slides (sem final fixo?)
+2026-08-10_rp2-polisaturacao                          CTA: ok                         FINAL: so 8 slides (sem final fixo?)
+2026-08-11_rp2-comparacao                             CTA: ok                         FINAL: so 8 slides (sem final fixo?)
+2026-08-12_rp2-nre-paixao                             CTA: ok                         FINAL: so 8 slides (sem final fixo?)
+2026-08-13_rp2-fadiga-drs                             CTA: ok                         FINAL: so 8 slides (sem final fixo?)
+2026-08-14_rp2-custo-julgamento                       CTA: ok                         FINAL: so 8 slides (sem final fixo?)
+2026-08-15_rp2-renegociar-acordo                      CTA: ok                         FINAL: so 8 slides (sem final fixo?)
+amor-livre-nao-e-amor-sem-limites                     CTA: ok                         FINAL: DIFERE da referencia (12)
+ciume-nao-te-faz-imaturo                              CTA: ok                         FINAL: so 9 slides (sem final fixo?)
+comunicacao-nao-resolve-tudo                          CTA: ok                         FINAL: DIFERE da referencia (12)
+desafios-ep1-ciume                                    CTA: ok                         FINAL: so 8 slides (sem final fixo?)
+desafios-ep2-exaustao                                 CTA: ok                         FINAL: so 7 slides (sem final fixo?)
+desafios-ep3-comparacao                               CTA: ok                         FINAL: so 7 slides (sem final fixo?)
+desafios-ep4-nre                                      CTA: ok                         FINAL: so 7 slides (sem final fixo?)
+desafios-ep5-fadiga-drs                               CTA: ok                         FINAL: so 7 slides (sem final fixo?)
+desafios-ep6-julgamento                               CTA: accent LILAS               FINAL: so 7 slides (sem final fixo?)
+desafios-ep7-acordos                                  CTA: ok                         FINAL: so 7 slides (sem final fixo?)
+liberdade-relacional                                  CTA: ok                         FINAL: DIFERE da referencia (12)
+liberdade-sem-cuidado                                 CTA: ok                         FINAL: DIFERE da referencia (12)
+nao-mono-perfeito                                     CTA: ok                         FINAL: DIFERE da referencia (12)
+nm-nao-salva-relacionamento                           CTA: ok                         FINAL: DIFERE da referencia (12)
+vergonha-do-ciume                                     CTA: ok                         FINAL: DIFERE da referencia (12)
