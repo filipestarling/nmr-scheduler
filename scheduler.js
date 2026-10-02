@@ -48,7 +48,7 @@ function main() {
 
     try {
       const slides = collectSlides(post.slidesDir);
-      if (slides.length < 2) throw new Error(`Slides insuficientes: ${slides.length}`);
+      if (slides.length < 1) throw new Error(`Nenhum slide encontrado em ${post.slidesDir}`);
       console.log(`   ${slides.length} slides`);
 
       const result = spawnSync(

@@ -123,6 +123,16 @@ export async function pollUntilFinished(containerId, accessToken, timeoutMs = 15
   throw new Error(`Container ${containerId} timed out after ${timeoutMs}ms`);
 }
 
+// Post de imagem única: o próprio container leva a legenda (sem is_carousel_item)
+export async function createSingleContainer(userId, imageUrl, caption, accessToken) {
+  const params = new URLSearchParams({ image_url: imageUrl, caption, access_token: accessToken });
+  const body = await withRetry('createSingleContainer', async () => {
+    const res = await fetch(`${IG_BASE}/${userId}/media?${params}`, { method: 'POST' });
+    return { res, body: await res.json().catch(() => null) };
+  });
+  return body.id;
+}
+
 export async function createCarouselContainer(userId, childIds, caption, accessToken) {
   const params = new URLSearchParams({
     media_type: 'CAROUSEL',
@@ -161,8 +171,8 @@ async function main() {
 
   if (!images.length) throw new Error('--images is required (e.g. --images "slide1.jpg,slide2.jpg")');
   if (!caption) throw new Error('--caption is required');
-  if (images.length < 2 || images.length > 10) {
-    throw new Error(`Instagram carousels require 2–10 images (got ${images.length})`);
+  if (images.length > 10) {
+    throw new Error(`Instagram allows at most 10 images (got ${images.length})`);
   }
   if (caption.length > 2200) {
     throw new Error(`Caption exceeds Instagram's 2200-character limit (got ${caption.length})`);
@@ -193,6 +203,14 @@ async function main() {
   console.log(`\n⏲  Aguardando ${CDN_WARMUP_MS / 1000}s pra Cloudinary CDN propagar...`);
   await new Promise(r => setTimeout(r, CDN_WARMUP_MS));
 
+  let carouselId;
+  if (imageUrls.length === 1) {
+    // imagem única: um container só, já com a legenda
+    console.log('\n🖼  Creating single-image container...');
+    carouselId = await createSingleContainer(INSTAGRAM_USER_ID, imageUrls[0], caption, INSTAGRAM_ACCESS_TOKEN);
+    await pollUntilFinished(carouselId, INSTAGRAM_ACCESS_TOKEN);
+    console.log(`   Container ID: ${carouselId}`);
+  } else {
   console.log('\n📦 Creating Instagram media containers...');
   // Sequential (not parallel) to further reduce pressure on the IG fetch side.
   const childIds = [];
@@ -206,11 +224,12 @@ async function main() {
   console.log('   All containers ready.');
 
   console.log('\n🎠 Creating carousel container...');
-  const carouselId = await createCarouselContainer(
+  carouselId = await createCarouselContainer(
     INSTAGRAM_USER_ID, childIds, caption, INSTAGRAM_ACCESS_TOKEN
   );
   await pollUntilFinished(carouselId, INSTAGRAM_ACCESS_TOKEN);
   console.log(`   Carousel container ID: ${carouselId}`);
+  }
 
   // FINISHED nem sempre significa publicável na mesma hora: o publish pode
   // responder 2207027 ("Media ID is not available") por alguns segundos.
