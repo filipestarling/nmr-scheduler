@@ -1,0 +1,33 @@
+name: NMR — posts extras das 19h
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 22 * * *'   # 22:00 UTC = 19h BRT · posts extras do @naomonogamiaresponsavel (agenda em nmr-19h/agenda.json)
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write      # grava o status de volta no agenda.json
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Publicar o post extra do dia
+        env:
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
+          CLOUDINARY_CLOUD_NAME: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
+          CLOUDINARY_API_KEY: ${{ secrets.CLOUDINARY_API_KEY }}
+          CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
+        run: node nmr-19h/publish.mjs
+      - name: Salvar status
+        if: always()
+        run: |
+          git config user.name "NMR Scheduler"
+          git config user.email "noreply@naomonogamiaresponsavel.com.br"
+          git add nmr-19h/agenda.json
+          git diff --staged --quiet || git commit -m "nmr-19h: atualiza status [skip ci]"
+          git pull --rebase -q && git push
